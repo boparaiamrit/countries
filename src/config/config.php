@@ -1,16 +1,16 @@
 <?php
 
-return array(
+return [
+	
+	
+	/*
+	 |--------------------------------------------------------------------------
+	 | Database settings
+	 |--------------------------------------------------------------------------
+	 |
+	 | The name of the table to create in the database
+	 |
+	 */
+	'collection' => 'countries',
 
-
- /*
-  |--------------------------------------------------------------------------
-  | Database settings
-  |--------------------------------------------------------------------------
-  |
-  | The name of the table to create in the database
-  |
-  */
-  'table_name' => 'countries',
-
-);
+];

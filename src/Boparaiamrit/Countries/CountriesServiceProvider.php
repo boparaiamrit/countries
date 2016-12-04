@@ -47,16 +47,6 @@ class CountriesServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		$this->registerCountries();
-	}
-	
-	/**
-	 * Register the service provider.
-	 *
-	 * @return void
-	 */
-	public function registerCountries()
-	{
 		$this->app->singleton('countries', function () {
 			return new Country();
 		});

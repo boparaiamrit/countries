@@ -4,14 +4,8 @@
 	"type": "laravel-library",
 	"authors": [
 		{
-			"name": "Christoph Kempen",
-			"email": "christoph@downsized.nl",
-			"homepage": "http://downsized.nl/",
-			"role": "developer"
-		},
-		{
-			"name": "Paul Kievits",
-			"role": "developer"
+			"name": "Amritpal Singh",
+			"email": "boparaiamrit@gmail.com"
 		}
 	],
 	"keywords": [
@@ -23,7 +17,7 @@
 	"homepage": "https://github.com/webpatser/laravel-countries",
 	"license": "MIT",
 	"require": {
-		"php": ">=7.0"
+		"php": ">=5.6"
 	},
 	"autoload": {
 		"psr-0": {

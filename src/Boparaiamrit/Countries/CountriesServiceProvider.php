@@ -30,14 +30,9 @@ class CountriesServiceProvider extends ServiceProvider
 		$this->publishes([
 			__DIR__ . '/../../config/config.php'                => config_path('countries.php'),
 			__DIR__ . '/../../database/seeds/CountrySeeder.php' => database_path('seeds/CountrySeeder.php'),
-			__DIR__ . '/../../storage/app/data/countries.json'  => storage_path('app/data/countries.json')
-		
+			__DIR__ . '/../../storage/app/data/countries.json'  => storage_path('app/data/countries.json'),
+			__DIR__ . '/../../flags'                            => public_path('storage/flags')
 		]);
-		
-		// Append the country settings
-		$this->mergeConfigFrom(
-			__DIR__ . '/../../config/config.php', 'countries'
-		);
 	}
 	
 	/**
@@ -47,8 +42,15 @@ class CountriesServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		$this->app->singleton('countries', function () {
-			return new Country();
+		// Append the country settings
+		$this->mergeConfigFrom(
+			__DIR__ . '/../../config/config.php', 'countries'
+		);
+		
+		$this->app->singleton('countries', function ($app) {
+			$model = $app['config']->get('countries.model');
+			
+			return new $model;
 		});
 	}
 	

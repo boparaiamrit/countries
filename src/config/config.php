@@ -1,8 +1,8 @@
 <?php
 
 return [
-	
-	'model' => 'Boparaiamrit\Countries\Country',
-	
-	'collection' => 'countries',
+
+    'model' => 'Boparaiamrit\Countries\Country',
+
+    'collection' => 'countries',
 ];
